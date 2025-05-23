@@ -1,0 +1,12 @@
+[
+    {
+        "nombre": "Anillo de Plata",
+        "precio": 45000,
+        "imagen": "img/anillo-plata.jpg"
+    },
+    {
+        "nombre": "Perfume Floral",
+        "precio": 60000,
+        "imagen": "img/perfume-floral.jpg"
+    }
+]

@@ -1,0 +1,250 @@
+/* ===========================
+   Estilos Generales del Body
+   =========================== */
+body {
+    font-family: 'Segoe UI', sans-serif; /* Fuente moderna y legible */
+    margin: 0;                          /* Sin margen por defecto */
+    padding: 0;                         /* Sin padding por defecto */
+    background-color: #fdf9f3;          /* Fondo beige muy claro */
+    color: #222;                       /* Color de texto oscuro para buena lectura */
+}
+
+/* ===========================
+   Estilos para el Encabezado
+   =========================== */
+header {
+    background: #1a1a1a;               /* Fondo negro muy oscuro */
+    color: #f8e6c1;                   /* Texto color crema claro */
+    padding: 2rem 1rem;                /* Espacio interno arriba/abajo 2rem, laterales 1rem */
+    text-align: center;                /* Centrar texto */
+}
+
+/* Contenedor flexible para el logo y los textos del encabezado */
+.encabezado-flex {
+    display: flex;                      /* Activa el modelo Flexbox para alinear los elementos hijos */
+    align-items: center;               /* Centra verticalmente los elementos (logo y texto) */
+    justify-content: flex-start;       /* Alinea todo a la izquierda del contenedor */
+    gap: 30px;                         /* Espacio horizontal entre el logo y el bloque de texto */
+    flex-wrap: wrap;                   /* Permite que los elementos pasen a una nueva línea en pantallas pequeñas */
+    text-align: left;                  /* Alineación del texto hacia la izquierda dentro del bloque */
+}
+
+/* Estilos para el logo principal (imagen) */
+.logo-principal {
+    width: 200px;                      /* Tamaño fijo del logo */
+    border-radius: 12px;               /* Bordes redondeados para suavizar la imagen */
+    box-shadow: 0 4px 10px rgba(255, 215, 160, 0.4); /* Sombra dorada suave debajo del logo */
+    animation: floatLogo 2s ease-in-out infinite;  /* Movimiento suave hacia arriba y abajo (flotación) */
+    align-self: flex-start;            /* Alinea el logo al principio del eje vertical (parte superior del contenedor) */
+    margin-left: 9.0rem; /* ← agrega esta línea */
+}
+
+
+/* Título principal en el header */
+.titulo-principal {
+    font-size: 2.0rem;                /* Tamaño grande para destacar */
+    margin: 0;                        /* Sin margen */
+    color: #f8e6c1;                  /* Color crema */
+    letter-spacing: 1px;              /* Espacio entre letras para mejor legibilidad */
+}
+
+/* Leyenda o subtítulo del header */
+.leyenda {
+    font-size: 1.2rem;                /* Tamaño mediano */
+    color: #f8e6c1;                  /* Mismo color crema */
+    font-style: italic;               /* Cursiva para estilo elegante */
+    margin-top: 10px;                 /* Separación arriba */
+    margin-bottom: 20px;              /* Separación abajo */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Sombra ligera para resaltar texto */
+    letter-spacing: 0.5px;            /* Espacio entre letras */
+    animation: resplandor 5s ease-in-out infinite alternate; /* Animación de brillo intermitente */
+}
+
+/* ===================
+   Navegación (menu)
+   =================== */
+nav a {
+    margin: 0 15px;                  /* Separación horizontal entre enlaces */
+    color: #f8e6c1;                 /* Color crema */
+    font-weight: bold;              /* Negrita */
+    text-decoration: none;          /* Sin subrayado */
+    font-size: 1rem;                /* Tamaño estándar */
+    transition: color 0.3s;         /* Transición suave al cambiar color */
+    cursor: pointer;                /* Cursor puntero para indicar que es clickable */
+}
+
+nav a:hover {
+    color: #d4af37;                 /* Color dorado cuando se pasa el cursor */
+}
+
+/* =========================
+   Estilos para el cuerpo (main)
+   ========================= */
+main {
+    padding: 2rem;                  /* Espaciado interior */
+    max-width: 1100px;              /* Ancho máximo para no extender demasiado */
+    margin: auto;                   /* Centrar contenido horizontalmente */
+}
+
+/* Estilo para títulos dentro del main */
+main h2 {
+    color: #1a1a1a;                /* Color negro oscuro */
+    border-bottom: 2px solid #d4af37; /* Línea dorada abajo */
+    padding-bottom: 5px;            /* Espacio interno debajo del texto */
+    margin-bottom: 1rem;            /* Separación inferior */
+}
+
+/* ======================
+   Galería de productos
+   ====================== */
+.galeria {
+    display: grid;                                      /* Layout en rejilla */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Columnas responsivas */
+    gap: 20px;                                         /* Espacio entre productos */
+    margin-bottom: 2rem;                               /* Separación inferior */
+}
+
+/* Cada producto individual */
+.producto {
+    background: white;                                 /* Fondo blanco */
+    border-radius: 10px;                               /* Bordes redondeados */
+    overflow: hidden;                                  /* Cortar contenido que sobresalga */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);       /* Sombra sutil para profundidad */
+    transition: transform 0.3s ease;                   /* Transición para hover */
+}
+
+.producto:hover {
+    transform: scale(1.02);                            /* Escala levemente al pasar el cursor */
+}
+
+/* Imagen dentro del producto */
+.producto img {
+    width: 100%;                                       /* Ancho completo */
+    height: 200px;                                     /* Alto fijo */
+    object-fit: cover;                                 /* Recortar imagen para llenar espacio */
+}
+
+/* Título del producto */
+.producto h3 {
+    margin: 0.5rem;                                    /* Espacio interno */
+    color: #d4af37;                                    /* Color dorado */
+    font-size: 1.1rem;                                 /* Tamaño mediano */
+}
+
+/* Precio o descripción breve */
+.producto p {
+    margin: 0.5rem;                                    /* Espacio interno */
+    font-weight: bold;                                 /* Negrita */
+    color: #444;                                       /* Gris oscuro */
+}
+
+/* Botón de añadir producto */
+.producto button {
+    margin: 0.5rem;                                    /* Espacio alrededor */
+    padding: 10px 15px;                                /* Tamaño del botón */
+    border: none;                                      /* Sin borde */
+    background: #d4af37;                               /* Fondo dorado */
+    color: #1a1a1a;                                    /* Texto oscuro */
+    font-weight: bold;                                 /* Negrita */
+    cursor: pointer;                                   /* Cursor puntero */
+    border-radius: 5px;                                /* Bordes redondeados */
+    transition: background 0.3s;                        /* Transición suave */
+}
+
+.producto button:hover {
+    background: #b99327;                               /* Dorado más oscuro al hover */
+}
+
+/* ==================
+   Estilos para carrito
+   ================== */
+#carrito {
+    list-style: none;                                  /* Sin viñetas */
+    padding: 0;                                        /* Sin padding */
+    margin: 1rem 0;                                    /* Margen vertical */
+}
+
+#carrito li {
+    background: #fffaf0;                               /* Fondo crema claro */
+    padding: 10px;                                     /* Espaciado interno */
+    margin-bottom: 6px;                                /* Separación entre ítems */
+    border-left: 5px solid #d4af37;                    /* Borde izquierdo dorado */
+    border-radius: 5px;                                /* Bordes redondeados */
+}
+
+/* ==================
+   Botón para enviar pedido por WhatsApp
+   ================== */
+button[onclick="enviarPedido()"] {
+    background: #1a1a1a;                               /* Fondo negro */
+    color: #f8e6c1;                                   /* Texto crema */
+    padding: 12px 20px;                                /* Espaciado */
+    border: none;                                      /* Sin borde */
+    font-size: 1rem;                                   /* Tamaño de texto */
+    font-weight: bold;                                 /* Negrita */
+    border-radius: 8px;                                /* Bordes redondeados */
+    cursor: pointer;                                   /* Cursor puntero */
+    transition: background 0.3s;                       /* Transición suave */
+}
+
+button[onclick="enviarPedido()"]:hover {
+    background: #333;                                  /* Fondo más claro al hover */
+}
+
+/* =========================
+   Estilo para el total del carrito
+   ========================= */
+#total {
+    font-weight: bold;                                 /* Negrita */
+    color: #b99327;                                    /* Color dorado */
+}
+
+/* =================
+   Animaciones CSS
+   ================= */
+@keyframes resplandor {
+    0% {
+        text-shadow: 1px 1px 4px rgba(255, 223, 150, 0.4);
+    }
+    100% {
+        text-shadow: 2px 2px 8px rgba(255, 223, 150, 0.8);
+    }
+}
+
+@keyframes floatLogo {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.1); opacity: 1; }
+    80% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+/* ===================
+   Estilos Responsivos
+   =================== */
+@media screen and (max-width: 600px) {
+    .encabezado-flex {
+        flex-direction: column;                        /* Apilar verticalmente */
+        align-items: center;                           /* Centrar contenido */
+        text-align: center;                            /* Centrar texto */
+    }
+
+    .logo-principal {
+        width: 320px;                                   /* Reducir tamaño del logo */
+        margin-bottom: 10px;                           /* Separación abajo */
+    }
+
+    .titulo-principal {
+        font-size: 1.6rem;                             /* Reducir tamaño del título */
+    }
+
+    nav a {
+        display: block;                                /* Enlaces en bloque, uno debajo del otro */
+        margin: 60px 0;                                /* Separación vertical */
+    }
+}

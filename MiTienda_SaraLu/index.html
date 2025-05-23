@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+    <div class="encabezado-flex">
+        <img src="img/logo-saralu.png" alt="Logo Representaciones Saralu" class="logo-principal">
+        <div>
+            <h1 class="titulo-principal">Representaciones SaraLu<br>Joyería y Perfumes</h1>
+            <p class="leyenda">Descubre el brillo que te define — elegancia, lujo y esencia en cada detalle.</p>
+        </div>
+    </div>
+
+    <nav aria-label="Menú principal">
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    </header>
+
+
+    <main>
+        <section>
+            <h2>Productos</h2>
+            <div id="productos" class="galeria"></div>
+        </section>
+
+        <section>
+            <h2>Carrito de Compras</h2>
+            <ul id="carrito"></ul>
+            <p>Total: $<span id="total">0</span></p>
+            <button onclick="enviarPedido()">Enviar pedido por WhatsApp</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
